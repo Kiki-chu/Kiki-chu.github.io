@@ -1,0 +1,143 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #3d155f;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #4831d4;
+}
+
+.header {
+  background: linear-gradient(
+    90deg,
+    #4831d4 0%,
+    #4831d4 71%,
+    #f4d06f 71.01%,
+    #f4d06f 100%
+  );
+  color: #f9f9f9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header > .content {
+  width: 55%;
+  padding: 30px 60px;
+}
+
+.header > .photo {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.header > .photo > img {
+  max-width: 46%;
+}
+
+.header > .content > h1 {
+  color: #f4d06f;
+}
+
+a.button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #f9f9f9;
+  position: relative;
+  z-index: 5;
+  border: 1px solid #f4d06f;
+  transition: color 0.5s;
+}
+
+a.button:hover {
+  color: #3d155f;
+}
+
+a.button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #f4d06f;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  z-index: -1;
+}
+
+a.button:hover:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.about {
+  display: flex;
+}
+
+.about > section {
+  width: 50%;
+}
+
+.about > section > article {
+  padding: 30px 60px;
+}
+
+.projects {
+  background: #f4d06f;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 50px;
+}
+
+.projects > section {
+  width: 33%;
+}
+
+.projects > section > article {
+  margin: 30px 10px;
+  background: #f9f9f9;
+  border: 4px solid #f9f9f9;
+}
+
+.projects > section > article > img {
+  max-width: 100%;
+}
+
+.projects > section > article > .content {
+  padding: 10px;
+}
+
+.projects > section > article > .content > a,
+.projects > section > article > .content > a:visited {
+  font-size: 24px;
+  color: #3d155f;
+  margin-right: 5px;
+}
+
+.projects > section > article > .content > ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.projects > section > article > .content > ul > li {
+  font-family: "VT323", monospace;
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 8px;
+}
