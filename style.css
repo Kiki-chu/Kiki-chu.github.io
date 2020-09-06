@@ -25,6 +25,18 @@ h4 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
+}
+
+.header:before {
+  content: "";
+  background-image: url("/img//patterns.svg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .header > .content {
@@ -40,8 +52,12 @@ h4 {
   padding: 40px 0;
 }
 
-.header > .photo > img {
+.header > .photo > .img {
   max-width: 46%;
+}
+
+.header > .photo > .img > img {
+  max-width: 100%;
 }
 
 .header > .content > h1 {
@@ -140,4 +156,20 @@ a.button:hover:before {
   font-size: 18px;
   display: inline-block;
   margin-right: 8px;
+}
+
+.fakeborder {
+  position: relative;
+  z-index: 4;
+}
+
+.fakeborder:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: -15px;
+  right: -20px;
+  left: 20px;
+  border: 1px solid #f9f9f9;
+  z-index: -1;
 }
