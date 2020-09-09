@@ -116,42 +116,57 @@ a.button:hover:before {
 
 .projects {
   background: #f4d06f;
-  display: flex;
-  flex-direction: row;
-  padding: 0px 50px;
+  padding: 20px 50px;
 }
 
-.projects > section {
+.projects > h1 {
+  padding: 0px 10px;
+  margin-bottom: 0px;
+}
+
+.projects > .list {
+  display: flex;
+  flex-direction: row;
+}
+
+.projects > .list > section {
   width: 33%;
 }
 
-.projects > section > article {
+.projects > .list > section > article {
   margin: 30px 10px;
   background: #f9f9f9;
-  border: 4px solid #f9f9f9;
 }
 
-.projects > section > article > img {
+.projects > .list > section > article > img {
   max-width: 100%;
+  filter: grayscale(100%) contrast(150%);
+  transition: filter;
+  transition-duration: 0.5s;
 }
 
-.projects > section > article > .content {
+.projects > .list > section:hover > article > img {
+  filter: grayscale(0%) contrast(100%);
+  transition-timing-function: ease-out;
+}
+
+.projects > .list > section > article > .content {
   padding: 10px;
 }
 
-.projects > section > article > .content > a,
-.projects > section > article > .content > a:visited {
+.projects > .list > section > article > .content > a,
+.projects > .list > section > article > .content > a:visited {
   font-size: 24px;
   color: #3d155f;
   margin-right: 5px;
 }
 
-.projects > section > article > .content > ul {
+.projects > .list > section > article > .content > ul {
   list-style: none;
   padding: 0px;
 }
 
-.projects > section > article > .content > ul > li {
+.projects > .list > section > article > .content > ul > li {
   font-family: "VT323", monospace;
   font-size: 18px;
   display: inline-block;
@@ -172,4 +187,45 @@ a.button:hover:before {
   left: 20px;
   border: 1px solid #f9f9f9;
   z-index: -1;
+}
+
+footer {
+  padding: 80px 60px;
+  background: #2b2d42;
+  color: #f9f9f9;
+}
+
+footer * h1,
+footer * h2,
+footer * h3,
+footer * h4,
+footer * a,
+footer * a:visited {
+  color: #f9f9f9;
+  text-decoration: none;
+}
+
+footer > section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+footer > section > .info {
+  flex: 2;
+}
+
+footer > section > .links {
+  flex: 1;
+}
+
+footer > section > .links > ul {
+  padding: 0px;
+  list-style: none;
+}
+
+footer > article {
+  padding-top: 20px;
+  text-align: center;
 }
