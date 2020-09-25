@@ -131,6 +131,7 @@ a.button:hover:before {
 
 .projects > .list > section {
   width: 33%;
+  max-height: 30%;
 }
 
 .projects > .list > section > article {
